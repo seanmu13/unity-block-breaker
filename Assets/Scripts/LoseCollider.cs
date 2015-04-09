@@ -3,13 +3,11 @@ using System.Collections;
 
 public class LoseCollider : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
+	void OnTriggerEnter2D (Collider2D trigger) {
+		print ("Trigger");
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
+	void OnCollisionEnter2D (Collision2D collision) {
+		print ("Collision");
 	}
 }
