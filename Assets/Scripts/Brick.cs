@@ -20,7 +20,10 @@ public class Brick : MonoBehaviour {
 	
 	void OnCollisionEnter2D (Collision2D collision) {
 		this.timesHit++;
-		SimulateWin();
+		
+		if(this.timesHit >= maxHits) {
+			Destroy(gameObject);
+		}
 	}
 	
 	// TODO Remove this method once we actually win!	
